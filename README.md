@@ -985,8 +985,6 @@ translation_system.translate_to_new_lang()
 
 ## License
 
-MIT
-
 MIT License
 
 Copyright (c) 2022 Carlos Perilla Budget System
