@@ -1,7 +1,9 @@
 from setuptools import setup, find_packages
 
-with open('./requirements.txt') as f:
-	requirements = f.readlines()
+# with open('./requirements.txt') as f:
+# 	requirements = f.readlines()
+
+requirements = ['colorama==0.4.4\n', 'numpy==1.21.6\n', 'pandas==1.3.5']
 
 with open("./README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
