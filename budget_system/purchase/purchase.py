@@ -15,17 +15,15 @@ from ..extra_types.SpentTypes import ProductsData
 #To get the name of the column with the prices
 from ..settings.Config import ConfigBudget
 
-#Name of the column with the prices.
-PRICE_NAME = ConfigBudget().PRICE_NAME
-
 class PurchaseList:
     """Class that reads the table with the purchases,
     sorts them by price and extracts the relevant data.
     """
 
-    price_name:str = PRICE_NAME
-
     def __init__(self, location:str) -> None:
+        #Name of the column with the prices.
+        self.price_name: str = ConfigBudget().PRICE_NAME
+
         self.data_frame =  pd.read_csv(location, delimiter=",")
         self.df_by_price = self.data_frame.sort_values(self.price_name) #This sorts by price.
 
