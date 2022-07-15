@@ -8,7 +8,7 @@ with open("./README.md", "r", encoding="utf-8") as fh:
 
 setup(
 		name ='budget_system',
-		version ='1.0.0',
+		version ='1.0.1',
 		author ='carlosmperilla',
 		author_email ='carlosperillaprogramacion@gmail.com',
 		url ='https://github.com/carlosmperilla/budget-system',
