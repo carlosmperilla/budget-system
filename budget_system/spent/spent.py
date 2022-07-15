@@ -21,16 +21,6 @@ from ..purchase import PurchaseList
 #To extract data from the table name.
 from ..parsers import ParserTableName
 
-#When instantiating we verify that the config.ini path exists in the environment variables
-config_budget = ConfigBudget()
-
-CONFIG_FILE_NAME = config_budget.CONFIG_FILE_NAME
-BASE_PATH,\
-YEAR_PATH,\
-MONTH_PATH,\
-TABLE_PATH = config_budget.get_paths()
-
-
 class Spent:
     """Class that is responsible for the extraction and management of data by month, year and total.
     Note: If you want expenses by sector-date, use the PurchaseList class.
@@ -42,6 +32,16 @@ class Spent:
         return sum(spent_by_period[1] for spent_by_period in periods.values())
 
     def __init__(self) -> None:
+        #When instantiating we verify that the config.ini path exists in the environment variables
+        self.__config_budget = ConfigBudget()
+
+        self.CONFIG_FILE_NAME = self.__config_budget.CONFIG_FILE_NAME
+        self.BASE_PATH,\
+        self.YEAR_PATH,\
+        self.MONTH_PATH,\
+        self.TABLE_PATH = self.__config_budget.get_paths()
+
+
         #Index with the spent in the product data
         self.spending_index = 2
 
@@ -53,7 +53,7 @@ class Spent:
         total_spent_month = float64(0)
         for table_name in purchase_lists:
             #This generates the Purchase List from the file in the month folder to work with its data
-            location_csv = TABLE_PATH.format(month_path=month_path, table_name=table_name)
+            location_csv = self.TABLE_PATH.format(month_path=month_path, table_name=table_name)
             table_purchase = PurchaseList(location_csv)
 
             #Store name and date of purchase
@@ -87,7 +87,7 @@ class Spent:
         valid_month = Month().validate(month)
 
         #This generates the path of the month
-        month_path = MONTH_PATH.format(year=year, month=valid_month)
+        month_path = self.MONTH_PATH.format(year=year, month=valid_month)
         #This lists the tables with the purchases made by sector and date.
         purchase_lists = os.listdir(month_path)
 
@@ -98,7 +98,7 @@ class Spent:
         
         #This lists the months by year.
         #And it generates the path of the year
-        months_by_year = os.listdir(YEAR_PATH.format(year=year))
+        months_by_year = os.listdir(self.YEAR_PATH.format(year=year))
 
         #Data of the months per year
         months_data = {
@@ -117,8 +117,8 @@ class Spent:
         #This lists the years in the budget
         years = (
             int(year_str) 
-                for year_str in os.listdir(BASE_PATH) 
-                    if year_str != CONFIG_FILE_NAME
+                for year_str in os.listdir(self.BASE_PATH) 
+                    if year_str != self.CONFIG_FILE_NAME
                     )
 
         #Data of the years
