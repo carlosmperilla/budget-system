@@ -43,8 +43,6 @@ pip install budget-system
 	* [Only translation](https://github.com/carlosmperilla/budget-system#only-translation)
 	* [Add a new language](https://github.com/carlosmperilla/budget-system#add-a-new-language)
 	* [Add a new language and Translate](https://github.com/carlosmperilla/budget-system#add-a-new-language-and-translate)
-	* [Only translation](https://github.com/carlosmperilla/budget-system#only-translation)
-	* [Only translation](https://github.com/carlosmperilla/budget-system#only-translation)
 
 ## Introduction
 ### Pre-requirements
