@@ -23,6 +23,29 @@ Budget System requires three external dependencies.
 pip install budget-system
 ```
 
+## Index
+* [Introduction](https://github.com/carlosmperilla/budget-system#introduction)
+	* [Pre-requirements](https://github.com/carlosmperilla/budget-system#pre-requirements)
+	* [Creation](https://github.com/carlosmperilla/budget-system#addition-files)
+	* [Addition Files](https://github.com/carlosmperilla/budget-system#creation)
+* [Visualization](https://github.com/carlosmperilla/budget-system#visualization)
+* [Data Processing](https://github.com/carlosmperilla/budget-system#data-processing)
+	* [Spent](https://github.com/carlosmperilla/budget-system#spent)
+		* [ProductsData](https://github.com/carlosmperilla/budget-system#productsdata)
+		* [DatesDict](https://github.com/carlosmperilla/budget-system#datesdict)
+		* [SectorsDict](https://github.com/carlosmperilla/budget-system#sectorsdict)
+		* [MonthData](https://github.com/carlosmperilla/budget-system#monthdata)
+		* [YearData](https://github.com/carlosmperilla/budget-system#yeardata)
+		* [TotalData](https://github.com/carlosmperilla/budget-system#totaldata)
+	* [PurchaseList](https://github.com/carlosmperilla/budget-system#purchaselist)
+	* [ParserTableName](https://github.com/carlosmperilla/budget-system#parsertablename)
+* [Translation](https://github.com/carlosmperilla/budget-system#translation)
+	* [Only translation](https://github.com/carlosmperilla/budget-system#only-translation)
+	* [Add a new language](https://github.com/carlosmperilla/budget-system#add-a-new-language)
+	* [Add a new language and Translate](https://github.com/carlosmperilla/budget-system#add-a-new-language-and-translate)
+	* [Only translation](https://github.com/carlosmperilla/budget-system#only-translation)
+	* [Only translation](https://github.com/carlosmperilla/budget-system#only-translation)
+
 ## Introduction
 ### Pre-requirements
 * The csv files with the purchase data must have at least one column with the prices of each product.
