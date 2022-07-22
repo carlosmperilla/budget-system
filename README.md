@@ -26,8 +26,8 @@ pip install budget-system
 ## Index
 * [Introduction](https://github.com/carlosmperilla/budget-system#introduction)
 	* [Pre-requirements](https://github.com/carlosmperilla/budget-system#pre-requirements)
-	* [Creation](https://github.com/carlosmperilla/budget-system#addition-files)
-	* [Addition Files](https://github.com/carlosmperilla/budget-system#creation)
+	* [Creation](https://github.com/carlosmperilla/budget-system#creation)
+	* [Addition Files](https://github.com/carlosmperilla/budget-system#addition-files)
 * [Visualization](https://github.com/carlosmperilla/budget-system#visualization)
 * [Data Processing](https://github.com/carlosmperilla/budget-system#data-processing)
 	* [Spent](https://github.com/carlosmperilla/budget-system#spent)
