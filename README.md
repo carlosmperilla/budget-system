@@ -237,7 +237,7 @@ You must set the environment variable **CONFIG_BUDGET**, with the location of th
         os.environ['CONFIG_BUDGET'] = os.path.join(base_folder, 'config.ini')
   
       year = 2022
-      data_years = Spent().spending_by_year(year)}
+      data_years = Spent().spending_by_year(year)
       year_data_by_key = {year:data_years}
       
       DisplayData().show_year_data(year, year_data_by_key)
