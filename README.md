@@ -255,7 +255,7 @@ You must set the environment variable **CONFIG_BUDGET**, with the location of th
         os.environ['CONFIG_BUDGET'] = os.path.join(base_folder, 'config.ini')
   
       year, month = 2022, 'April'
-      data_months = Spent().spending_by_month(year, Month)
+      data_months = Spent().spending_by_month(year, month)
       month_data_by_key = {month : data_months}
       
       DisplayData().show_month_data(month, month_data_by_key)
