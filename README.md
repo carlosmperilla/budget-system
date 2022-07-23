@@ -441,7 +441,7 @@ If you want to know **the spent made in a store in a particular month**, check t
   if os.environ.get('CONFIG_BUDGET'):
   os.environ['CONFIG_BUDGET'] = os.path.join(base_folder, 'config.ini')
  
-  year, month = 2022, 'April'
+  year, month, store_name = 2022, 'April'
   d_index = 0 #dict index
   month_path = ConfigBudget().MONTH_PATH.format(year=year, month=month)
   sectors_dict = Spent().spending_by_sector_in_month(month_path, store_name)[d_index]
