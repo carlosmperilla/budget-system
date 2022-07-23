@@ -784,7 +784,7 @@ from budget_system import ParserTableName
 
 file_name = 'Purchase_List_StoreOne_[23-04-22].csv'
 
-store_name = ParserTableName(file_name).get_table_date()
+table_date = ParserTableName(file_name).get_table_date()
 
 print(table_date) #'23-04-22'
 ```
