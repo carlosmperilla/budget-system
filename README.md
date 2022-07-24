@@ -220,7 +220,7 @@ You must set the environment variable **CONFIG_BUDGET**, with the location of th
       base_folder = r"C:\Users\username\Documents\MyBudget"
   
       #If the environment variable for the configuration has not been set, we set it.
-      if os.environ.get('CONFIG_BUDGET'):
+      if not os.environ.get('CONFIG_BUDGET'):
         os.environ['CONFIG_BUDGET'] = os.path.join(base_folder, 'config.ini')
   
       DisplayData().show_total_data()
@@ -233,7 +233,7 @@ You must set the environment variable **CONFIG_BUDGET**, with the location of th
       base_folder = r"C:\Users\username\Documents\MyBudget"
   
       #If the environment variable for the configuration has not been set, we set it.
-      if os.environ.get('CONFIG_BUDGET'):
+      if not os.environ.get('CONFIG_BUDGET'):
         os.environ['CONFIG_BUDGET'] = os.path.join(base_folder, 'config.ini')
   
       year = 2022
@@ -251,7 +251,7 @@ You must set the environment variable **CONFIG_BUDGET**, with the location of th
       base_folder = r"C:\Users\username\Documents\MyBudget"
   
       #If the environment variable for the configuration has not been set, we set it.
-      if os.environ.get('CONFIG_BUDGET'):
+      if not os.environ.get('CONFIG_BUDGET'):
         os.environ['CONFIG_BUDGET'] = os.path.join(base_folder, 'config.ini')
   
       year, month = 2022, 'April'
@@ -270,7 +270,7 @@ You must set the environment variable **CONFIG_BUDGET**, with the location of th
       base_folder = r"C:\Users\username\Documents\MyBudget"
   
       #If the environment variable for the configuration has not been set, we set it.
-      if os.environ.get('CONFIG_BUDGET'):
+      if not os.environ.get('CONFIG_BUDGET'):
         os.environ['CONFIG_BUDGET'] = os.path.join(base_folder, 'config.ini')
   
       year, month, store_name = 2022, 'April', 'StoreOne'
@@ -290,7 +290,7 @@ You must set the environment variable **CONFIG_BUDGET**, with the location of th
       base_folder = r"C:\Users\username\Documents\MyBudget"
   
       #If the environment variable for the configuration has not been set, we set it.
-      if os.environ.get('CONFIG_BUDGET'):
+      if not os.environ.get('CONFIG_BUDGET'):
         os.environ['CONFIG_BUDGET'] = os.path.join(base_folder, 'config.ini')
   
       year, month, store_name, buy_date = 2022, 'April', 'StoreOne', '23-04-22'
@@ -337,8 +337,8 @@ Here we will use two approaches, the **concrete approach** (the function that ex
   base_folder = r"C:\Users\username\Documents\MyBudget"
   
   #If the environment variable for the configuration has not been set, we set it.
-  if os.environ.get('CONFIG_BUDGET'):
-  os.environ['CONFIG_BUDGET'] = os.path.join(base_folder, 'config.ini')
+  if not os.environ.get('CONFIG_BUDGET'):
+    os.environ['CONFIG_BUDGET'] = os.path.join(base_folder, 'config.ini')
  
   year, month, store_name, date = 2022, 'April', 'StoreOne', '23-04-22'
   d_index = 0 #dict index
@@ -359,8 +359,8 @@ Here we will use two approaches, the **concrete approach** (the function that ex
   base_folder = r"C:\Users\username\Documents\MyBudget"
   
   #If the environment variable for the configuration has not been set, we set it.
-  if os.environ.get('CONFIG_BUDGET'):
-  os.environ['CONFIG_BUDGET'] = os.path.join(base_folder, 'config.ini')
+  if not os.environ.get('CONFIG_BUDGET'):
+    os.environ['CONFIG_BUDGET'] = os.path.join(base_folder, 'config.ini')
  
   year, month, store_name, date = 2022, 'April', 'StoreOne', '23-04-22'
   d_index = 0 #dict index
@@ -387,8 +387,8 @@ Here we will use two approaches, the **concrete approach** (the function that ex
   base_folder = r"C:\Users\username\Documents\MyBudget"
   
   #If the environment variable for the configuration has not been set, we set it.
-  if os.environ.get('CONFIG_BUDGET'):
-  os.environ['CONFIG_BUDGET'] = os.path.join(base_folder, 'config.ini')
+  if not os.environ.get('CONFIG_BUDGET'):
+    os.environ['CONFIG_BUDGET'] = os.path.join(base_folder, 'config.ini')
  
   year, month, store_name = 2022, 'April', 'StoreOne'
   d_index = 0 #dict index
@@ -408,8 +408,8 @@ Here we will use two approaches, the **concrete approach** (the function that ex
   base_folder = r"C:\Users\username\Documents\MyBudget"
   
   #If the environment variable for the configuration has not been set, we set it.
-  if os.environ.get('CONFIG_BUDGET'):
-  os.environ['CONFIG_BUDGET'] = os.path.join(base_folder, 'config.ini')
+  if not os.environ.get('CONFIG_BUDGET'):
+    os.environ['CONFIG_BUDGET'] = os.path.join(base_folder, 'config.ini')
  
   year, month, store_name = 2022, 'April', 'StoreOne'
   d_index = 0 #dict index
@@ -438,8 +438,8 @@ If you want to know **the spent made in a store in a particular month**, check t
   base_folder = r"C:\Users\username\Documents\MyBudget"
   
   #If the environment variable for the configuration has not been set, we set it.
-  if os.environ.get('CONFIG_BUDGET'):
-  os.environ['CONFIG_BUDGET'] = os.path.join(base_folder, 'config.ini')
+  if not os.environ.get('CONFIG_BUDGET'):
+    os.environ['CONFIG_BUDGET'] = os.path.join(base_folder, 'config.ini')
  
   year, month, store_name = 2022, 'April'
   d_index = 0 #dict index
@@ -459,8 +459,8 @@ If you want to know **the spent made in a store in a particular month**, check t
   base_folder = r"C:\Users\username\Documents\MyBudget"
   
   #If the environment variable for the configuration has not been set, we set it.
-  if os.environ.get('CONFIG_BUDGET'):
-  os.environ['CONFIG_BUDGET'] = os.path.join(base_folder, 'config.ini')
+  if not os.environ.get('CONFIG_BUDGET'):
+    os.environ['CONFIG_BUDGET'] = os.path.join(base_folder, 'config.ini')
  
   year, month = 2022, 'April'
   d_index = 0 #dict index
@@ -492,8 +492,8 @@ How to extract spending and inherited information from **one month** to one year
   base_folder = r"C:\Users\username\Documents\MyBudget"
   
   #If the environment variable for the configuration has not been set, we set it.
-  if os.environ.get('CONFIG_BUDGET'):
-  os.environ['CONFIG_BUDGET'] = os.path.join(base_folder, 'config.ini')
+  if not os.environ.get('CONFIG_BUDGET'):
+    os.environ['CONFIG_BUDGET'] = os.path.join(base_folder, 'config.ini')
  
   year, month = 2022, 'April'
   month_data = Spent().spending_by_month(year, month)
@@ -512,8 +512,8 @@ How to extract spending and inherited information from **one month** to one year
   base_folder = r"C:\Users\username\Documents\MyBudget"
   
   #If the environment variable for the configuration has not been set, we set it.
-  if os.environ.get('CONFIG_BUDGET'):
-  os.environ['CONFIG_BUDGET'] = os.path.join(base_folder, 'config.ini')
+  if not os.environ.get('CONFIG_BUDGET'):
+    os.environ['CONFIG_BUDGET'] = os.path.join(base_folder, 'config.ini')
  
   year, month = 2022, 'April'
   d_index = 0 #dict index
@@ -535,8 +535,8 @@ How to extract spending and inherited information from **one store in a month**,
   base_folder = r"C:\Users\username\Documents\MyBudget"
   
   #If the environment variable for the configuration has not been set, we set it.
-  if os.environ.get('CONFIG_BUDGET'):
-  os.environ['CONFIG_BUDGET'] = os.path.join(base_folder, 'config.ini')
+  if not os.environ.get('CONFIG_BUDGET'):
+    os.environ['CONFIG_BUDGET'] = os.path.join(base_folder, 'config.ini')
  
   year, month, store_name = 2022, 'April', 'StoreOne'
   month_path = ConfigBudget().MONTH_PATH.format(year=year, month=month)
@@ -562,8 +562,8 @@ How to extract spending and inherited information from **one year**.
   base_folder = r"C:\Users\username\Documents\MyBudget"
   
   #If the environment variable for the configuration has not been set, we set it.
-  if os.environ.get('CONFIG_BUDGET'):
-  os.environ['CONFIG_BUDGET'] = os.path.join(base_folder, 'config.ini')
+  if not os.environ.get('CONFIG_BUDGET'):
+    os.environ['CONFIG_BUDGET'] = os.path.join(base_folder, 'config.ini')
  
   year = 2022
   year_data = Spent().spending_by_year(year)
@@ -582,8 +582,8 @@ How to extract spending and inherited information from **one year**.
   base_folder = r"C:\Users\username\Documents\MyBudget"
   
   #If the environment variable for the configuration has not been set, we set it.
-  if os.environ.get('CONFIG_BUDGET'):
-  os.environ['CONFIG_BUDGET'] = os.path.join(base_folder, 'config.ini')
+  if not os.environ.get('CONFIG_BUDGET'):
+    os.environ['CONFIG_BUDGET'] = os.path.join(base_folder, 'config.ini')
  
   year = 2022
   d_index = 0 #dict index
@@ -607,8 +607,8 @@ from budget_system import Spent
 base_folder = r"C:\Users\username\Documents\MyBudget"
 
 #If the environment variable for the configuration has not been set, we set it.
-if os.environ.get('CONFIG_BUDGET'):
-os.environ['CONFIG_BUDGET'] = os.path.join(base_folder, 'config.ini')
+if not os.environ.get('CONFIG_BUDGET'):
+  os.environ['CONFIG_BUDGET'] = os.path.join(base_folder, 'config.ini')
 
 total_data = Spent().total_spending()
 
@@ -634,8 +634,8 @@ from budget_system.settings.Config import ConfigBudget
 base_folder = r"C:\Users\username\Documents\MyBudget"
 
 #If the environment variable for the configuration has not been set, we set it.
-if os.environ.get('CONFIG_BUDGET'):
-os.environ['CONFIG_BUDGET'] = os.path.join(base_folder, 'config.ini')
+if not os.environ.get('CONFIG_BUDGET'):
+  os.environ['CONFIG_BUDGET'] = os.path.join(base_folder, 'config.ini')
 
 year, month = 2022, 'April'
 month_path = ConfigBudget().MONTH_PATH.format(year=year, month=month)
@@ -659,8 +659,8 @@ from budget_system.settings.Config import ConfigBudget
 base_folder = r"C:\Users\username\Documents\MyBudget"
 
 #If the environment variable for the configuration has not been set, we set it.
-if os.environ.get('CONFIG_BUDGET'):
-os.environ['CONFIG_BUDGET'] = os.path.join(base_folder, 'config.ini')
+if not os.environ.get('CONFIG_BUDGET'):
+  os.environ['CONFIG_BUDGET'] = os.path.join(base_folder, 'config.ini')
 
 year, month = 2022, 'April'
 month_path = ConfigBudget().MONTH_PATH.format(year=year, month=month)
@@ -682,8 +682,8 @@ from budget_system.settings.Config import ConfigBudget
 base_folder = r"C:\Users\username\Documents\MyBudget"
 
 #If the environment variable for the configuration has not been set, we set it.
-if os.environ.get('CONFIG_BUDGET'):
-os.environ['CONFIG_BUDGET'] = os.path.join(base_folder, 'config.ini')
+if not os.environ.get('CONFIG_BUDGET'):
+  os.environ['CONFIG_BUDGET'] = os.path.join(base_folder, 'config.ini')
 
 year, month = 2022, 'April'
 month_path = ConfigBudget().MONTH_PATH.format(year=year, month=month)
@@ -705,8 +705,8 @@ from budget_system.settings.Config import ConfigBudget
 base_folder = r"C:\Users\username\Documents\MyBudget"
 
 #If the environment variable for the configuration has not been set, we set it.
-if os.environ.get('CONFIG_BUDGET'):
-os.environ['CONFIG_BUDGET'] = os.path.join(base_folder, 'config.ini')
+if not os.environ.get('CONFIG_BUDGET'):
+  os.environ['CONFIG_BUDGET'] = os.path.join(base_folder, 'config.ini')
 
 year, month = 2022, 'April'
 month_path = ConfigBudget().MONTH_PATH.format(year=year, month=month)
@@ -728,8 +728,8 @@ from budget_system.settings.Config import ConfigBudget
 base_folder = r"C:\Users\username\Documents\MyBudget"
 
 #If the environment variable for the configuration has not been set, we set it.
-if os.environ.get('CONFIG_BUDGET'):
-os.environ['CONFIG_BUDGET'] = os.path.join(base_folder, 'config.ini')
+if not os.environ.get('CONFIG_BUDGET'):
+  os.environ['CONFIG_BUDGET'] = os.path.join(base_folder, 'config.ini')
 
 year, month = 2022, 'April'
 month_path = ConfigBudget().MONTH_PATH.format(year=year, month=month)
@@ -750,8 +750,8 @@ from budget_system.settings.Config import ConfigBudget
 base_folder = r"C:\Users\username\Documents\MyBudget"
 
 #If the environment variable for the configuration has not been set, we set it.
-if os.environ.get('CONFIG_BUDGET'):
-os.environ['CONFIG_BUDGET'] = os.path.join(base_folder, 'config.ini')
+if not os.environ.get('CONFIG_BUDGET'):
+  os.environ['CONFIG_BUDGET'] = os.path.join(base_folder, 'config.ini')
 
 year, month = 2022, 'April'
 month_path = ConfigBudget().MONTH_PATH.format(year=year, month=month)
@@ -827,8 +827,8 @@ from budget_system.settings.Config import ConfigBudget
 base_folder = r"C:\Users\username\Documents\MyBudget"
 
 #If the environment variable for the configuration has not been set, we set it.
-if os.environ.get('CONFIG_BUDGET'):
-os.environ['CONFIG_BUDGET'] = os.path.join(base_folder, 'config.ini')
+if not os.environ.get('CONFIG_BUDGET'):
+  os.environ['CONFIG_BUDGET'] = os.path.join(base_folder, 'config.ini')
 
 config_path = ConfigBudget().CONFIG_FILE_PATH
 Budget.translate_month_folders(config_path, 'SPA', 'ENG')
