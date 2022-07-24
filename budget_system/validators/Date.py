@@ -1,4 +1,6 @@
 """This module handles date validations."""
+#To access the configuration file
+import configparser
 
 #For data types.
 from typing import List, Dict
@@ -58,7 +60,12 @@ class Month:
     @staticmethod
     def get_months(lang:str=LANG) -> List[str]:
         """Get the months in a particular language."""
-        months = get_months_dict().get(lang)
+        lang_=lang
+        if os.environ.get('CONFIG_BUDGET'):
+            config = configparser.ConfigParser()
+            config.read(os.environ["CONFIG_BUDGET"], encoding="utf-8")
+            lang_ = config["DEFAULT"]["lang"]
+        months = get_months_dict().get(lang_)
         return months
 
     def __init__(self) -> None:
@@ -83,6 +90,7 @@ class Month:
 
     def validate(self, month:str) -> str:
         """This checks that the month is valid."""
+
 
         in_months = self.__in_months(month)
         is_empty = self.__is_empty(month)
